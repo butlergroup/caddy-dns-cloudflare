@@ -37,7 +37,7 @@ RUN setcap cap_net_bind_service=+ep /usr/bin/caddy; \
     caddy version
 
 LABEL org.opencontainers.image.title="Caddy with Cloudflare DNS module"
-LABEL org.opencontainers.image.description="Caddy web server image with the caddy-dns/cloudflare DNS provider module baked in"
+LABEL org.opencontainers.image.description="Caddy web server image with the butlergroup/caddy-dns-cloudflare DNS provider module baked in"
 LABEL org.opencontainers.image.url=https://caddyserver.com
 LABEL org.opencontainers.image.documentation=https://caddyserver.com/docs
 LABEL org.opencontainers.image.licenses=Apache-2.0

@@ -6,8 +6,8 @@
 [![OSV-Scanner](https://github.com/butlergroup/caddy-dns-cloudflare/actions/workflows/osv-scanner.yml/badge.svg)](https://github.com/butlergroup/caddy-dns-cloudflare/actions/workflows/osv-scanner.yml)
 [![Scorecard supply-chain security](https://github.com/butlergroup/caddy-dns-cloudflare/actions/workflows/scorecard.yml/badge.svg)](https://github.com/butlergroup/caddy-dns-cloudflare/actions/workflows/scorecard.yml)
 [![Microsoft Defender For Devops](https://github.com/butlergroup/caddy-dns-cloudflare/actions/workflows/defender-for-devops.yml/badge.svg)](https://github.com/butlergroup/caddy-dns-cloudflare/actions/workflows/defender-for-devops.yml)
-[![Feature Requests](https://img.shields.io/github/issues/caddy-dns/cloudflare/feature-request.svg)](https://github.com/butlergroup/caddy-dns-cloudflare/issues?q=is%3Aopen+is%3Aissue+label%3Aenhancement)
-[![Bugs](https://img.shields.io/github/issues/caddy-dns/cloudflare/bug.svg)](https://github.com/butlergroup/caddy-dns-cloudflare/issues?utf8=✓&q=is%3Aissue+is%3Aopen+label%3Abug)
+[![Feature Requests](https://img.shields.io/github/issues/butlergroup/caddy-dns-cloudflare/feature-request.svg)](https://github.com/butlergroup/caddy-dns-cloudflare/issues?q=is%3Aopen+is%3Aissue+label%3Aenhancement)
+[![Bugs](https://img.shields.io/github/issues/butlergroup/caddy-dns-cloudflare/bug.svg)](https://github.com/butlergroup/caddy-dns-cloudflare/issues?utf8=✓&q=is%3Aissue+is%3Aopen+label%3Abug)
 
 Cloudflare module for Caddy
 ===========================
