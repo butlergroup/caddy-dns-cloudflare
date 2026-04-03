@@ -5,7 +5,7 @@ ADD . .
 RUN go install github.com/caddyserver/xcaddy/cmd/xcaddy@latest && \
     xcaddy build \
     --output /usr/bin/caddy \
-    --with "github.com/caddy-dns/cloudflare=."
+    --with "github.com/butlergroup/caddy-dns-cloudflare=."
 
 FROM alpine:latest
 
@@ -41,7 +41,7 @@ LABEL org.opencontainers.image.description="Caddy web server image with the cadd
 LABEL org.opencontainers.image.url=https://caddyserver.com
 LABEL org.opencontainers.image.documentation=https://caddyserver.com/docs
 LABEL org.opencontainers.image.licenses=Apache-2.0
-LABEL org.opencontainers.image.source="https://github.com/caddy-dns/cloudflare"
+LABEL org.opencontainers.image.source="https://github.com/butlergroup/caddy-dns-cloudflare"
 
 EXPOSE 80
 EXPOSE 443

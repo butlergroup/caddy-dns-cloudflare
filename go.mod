@@ -1,4 +1,4 @@
-module github.com/caddy-dns/cloudflare
+module github.com/butlergroup/caddy-dns-cloudflare
 
 go 1.26.1
 

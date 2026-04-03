@@ -1,4 +1,4 @@
-## Version 1.0.1
+## Version 0.2.6 
 
 #### New Features
 
@@ -11,7 +11,20 @@
 
 ---
 
-## Version 1.0.0 (03-19-2026)
+## Version 0.2.5 (04-02-2026)
+
+#### New Features
+
+
+#### Improvements
+- Modified module name to point to github.com/butlergroup/caddy-dns-cloudflare
+
+#### Fixes
+
+
+---
+
+## Version 0.2.4 (03-26-2026)
 
 #### New Features
 - Added code-of-conduct.md
