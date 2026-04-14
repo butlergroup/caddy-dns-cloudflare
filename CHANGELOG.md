@@ -1,10 +1,24 @@
-## Version 0.2.6 
+## Version 0.2.7 
 
 #### New Features
 
 
 #### Improvements
 
+
+#### Fixes
+
+
+---
+
+## Version 0.2.6 (04-13-2026)
+
+#### New Features
+
+
+#### Improvements
+- Updated go.mod dependencies to latest and to use latest Go version (1.26.2)
+- Updated CI workflow to use latest Go version (1.26.2)
 
 #### Fixes
 
