@@ -1,10 +1,23 @@
-## Version 0.2.7 
+## Version 0.2.8 
 
 #### New Features
 
 
 #### Improvements
 
+
+#### Fixes
+
+
+---
+
+## Version 0.2.7 (04-25-2026)
+
+#### New Features
+
+
+#### Improvements
+- bump certmagic from 0.25.2 to 0.25.3
 
 #### Fixes
 
