@@ -1,4 +1,4 @@
-FROM caddy:2-builder-alpine AS builder
+FROM caddy:2-builder-alpine@sha256:113249e07ac54f02da3e395a7150124562af1a3129b0b1498ddbb39f5b3fc430 AS builder
 
 ADD . .
 
@@ -7,7 +7,7 @@ RUN go install github.com/caddyserver/xcaddy/cmd/xcaddy@latest && \
     --output /usr/bin/caddy \
     --with "github.com/butlergroup/caddy-dns-cloudflare=."
 
-FROM alpine:latest
+FROM alpine:latest@sha256:5b10f432ef3da1b8d4c7eb6c487f2f5a8f096bc91145e68878dd4a5019afde11
 
 # added zlib to address CVE-2026-22184
 # added openssl to address CVE-2026-2673
