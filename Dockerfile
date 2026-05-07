@@ -1,4 +1,4 @@
-FROM caddy:2-builder-alpine AS builder
+FROM golang:1.26.3-alpine AS builder
 
 ADD . .
 
