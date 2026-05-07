@@ -4,8 +4,8 @@
 
 
 #### Improvements
-- Updated go.mod dependencies to latest and to use latest Go version (1.26.3)
-- Updated CI workflow to use latest Go version (1.26.3)
+- Updated go.mod dependencies to latest and to use latest Go version (1.26.3) (pending)
+- Updated CI workflow to use latest Go version (1.26.3) (pending)
 
 #### Fixes
 
