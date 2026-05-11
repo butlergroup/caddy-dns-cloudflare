@@ -1,10 +1,23 @@
-## Version 0.2.9 
+## Version 0.2.10 
 
 #### New Features
 
 
 #### Improvements
 
+
+#### Fixes
+
+
+---
+
+## Version 0.2.9 (05-11-2026)
+
+#### New Features
+
+
+#### Improvements
+- Updated go.mod dependencies to latest
 
 #### Fixes
 
