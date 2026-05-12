@@ -2,8 +2,10 @@ FROM caddy:2-builder-alpine@sha256:ced7ea0d093d2ce6d3e28869640f0513afb96e42675f3
 
 ADD . .
 
+ARG CADDY_VERSION=v2.11.3
+
 RUN go install github.com/caddyserver/xcaddy/cmd/xcaddy@latest && \
-    xcaddy build \
+    xcaddy build ${CADDY_VERSION} \
     --output /usr/bin/caddy \
     --with "github.com/butlergroup/caddy-dns-cloudflare=."
 
