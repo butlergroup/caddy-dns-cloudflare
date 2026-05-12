@@ -1,10 +1,23 @@
-## Version 0.2.10 
+## Version 0.2.11 
 
 #### New Features
 
 
 #### Improvements
 
+
+#### Fixes
+
+
+---
+
+## Version 0.2.10 (05-12-2026)
+
+#### New Features
+
+
+#### Improvements
+- bump Caddy from v2.11.2 to v2.11.3
 
 #### Fixes
 
