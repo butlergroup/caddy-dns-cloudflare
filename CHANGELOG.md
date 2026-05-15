@@ -4,7 +4,7 @@
 
 
 #### Improvements
-
+- Updated Dockerfile dependencies to latest
 
 #### Fixes
 
