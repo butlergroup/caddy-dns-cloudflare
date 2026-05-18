@@ -103,4 +103,4 @@ jobs:
         with:
           package-name: caddy-dns-cloudflare
           package-type: container
-          min-versions-to-keep: 10
+          min-versions-to-keep: 31
