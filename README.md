@@ -3,6 +3,7 @@
 [![Go CI](https://github.com/butlergroup/caddy-dns-cloudflare/actions/workflows/continuous-integration.yml/badge.svg)](https://github.com/butlergroup/caddy-dns-cloudflare/actions/workflows/continuous-integration.yml)
 [![Dependabot Updates](https://github.com/butlergroup/caddy-dns-cloudflare/actions/workflows/dependabot/dependabot-updates/badge.svg)](https://github.com/butlergroup/caddy-dns-cloudflare/actions/workflows/dependabot/dependabot-updates)
 [![Go Report Card](https://goreportcard.com/badge/github.com/butlergroup/caddy-dns-cloudflare)](https://goreportcard.com/report/github.com/butlergroup/caddy-dns-cloudflare)
+[![OpenSSF Best Practices](https://www.bestpractices.dev/projects/12893/badge)](https://www.bestpractices.dev/projects/12893)
 [![OSV-Scanner](https://github.com/butlergroup/caddy-dns-cloudflare/actions/workflows/osv-scanner.yml/badge.svg)](https://github.com/butlergroup/caddy-dns-cloudflare/actions/workflows/osv-scanner.yml)
 [![Scorecard supply-chain security](https://github.com/butlergroup/caddy-dns-cloudflare/actions/workflows/scorecard.yml/badge.svg)](https://github.com/butlergroup/caddy-dns-cloudflare/actions/workflows/scorecard.yml)
 [![Microsoft Defender For Devops](https://github.com/butlergroup/caddy-dns-cloudflare/actions/workflows/defender-for-devops.yml/badge.svg)](https://github.com/butlergroup/caddy-dns-cloudflare/actions/workflows/defender-for-devops.yml)
