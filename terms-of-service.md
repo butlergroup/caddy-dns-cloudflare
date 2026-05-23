@@ -107,3 +107,7 @@ These Terms of Service and any separate agreements whereby we provide you Servic
 You can review the most current version of the Terms of Service at any time at this page.
 
 We reserve the right, at our sole discretion, to update, change or replace any part of these Terms of Service by posting updates and changes to this document. It is your responsibility to check this posting periodically for changes. Your continued use of or access to the application or the Service following the posting of any changes to these Terms of Service constitutes acceptance of those changes.
+
+## Section 17 – Contact Information
+
+Questions about the Terms of Service should be sent to us at legal@butlergroup.net
