@@ -1,4 +1,4 @@
-The cloudflare application does not collect user information. All information processed by the cloudflare application is encrypted both in-transit and at-rest.
+The caddy-dns-cloudflare application does not collect user information. All information processed by the caddy-dns-cloudflare application is encrypted both in-transit and at-rest.
 
 ## Who we share your data with
 
@@ -18,4 +18,4 @@ Under no circumstances including but not limited to negligence shall The Butler 
 
 ## Privacy Policy Revisions
 
-We may at any time revise this Privacy Policy by updating this posting. By using the cloudflare application, you agree to be bound by any such revisions and should therefore periodically visit this page to determine the then current Privacy Policy to which you are bound.
+We may at any time revise this Privacy Policy by updating this posting. By using the caddy-dns-cloudflare application, you agree to be bound by any such revisions and should therefore periodically visit this page to determine the then current Privacy Policy to which you are bound.

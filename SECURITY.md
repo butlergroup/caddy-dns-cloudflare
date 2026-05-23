@@ -2,7 +2,7 @@
 
 ## Supported Versions
 
-The following versions of env_encryption_tool are supported under a Service Level Agreement (SLA). Any version indicated with a red X will receive support on a best-effort and case-by-case basis:
+The following versions of caddy-dns-cloudflare are supported under a Service Level Agreement (SLA). Any version indicated with a red X will receive support on a best-effort and case-by-case basis:
 
 | Version | Supported          |
 | ------- | ------------------ |
@@ -11,4 +11,4 @@ The following versions of env_encryption_tool are supported under a Service Leve
 
 ## Reporting a Vulnerability
 
-Report any vulnerabilities found to the repository owner(s).
+Report any vulnerabilities found to dev@butlergroup.net
