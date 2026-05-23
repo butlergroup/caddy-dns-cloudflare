@@ -1,4 +1,4 @@
-[![](https://img.shields.io/badge/license-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![](https://img.shields.io/badge/license-AGPL_3.0-blue.svg)](https://opensource.org/licenses/AGPL_3.0)
 [![CodeQL](https://github.com/butlergroup/caddy-dns-cloudflare/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/butlergroup/caddy-dns-cloudflare/actions/workflows/github-code-scanning/codeql)
 [![Go CI](https://github.com/butlergroup/caddy-dns-cloudflare/actions/workflows/continuous-integration.yml/badge.svg)](https://github.com/butlergroup/caddy-dns-cloudflare/actions/workflows/continuous-integration.yml)
 [![Dependabot Updates](https://github.com/butlergroup/caddy-dns-cloudflare/actions/workflows/dependabot/dependabot-updates/badge.svg)](https://github.com/butlergroup/caddy-dns-cloudflare/actions/workflows/dependabot/dependabot-updates)
