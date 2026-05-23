@@ -1,4 +1,4 @@
-# Welcome to the cloudflare contributing guide!
+# Welcome to the caddy-dns-cloudflare contributing guide!
 
 Thank you for investing your time and effort into contributing to our project! Any contribution you make is most welcome :sparkles:.
 
@@ -67,4 +67,4 @@ Once you submit your pull request, a team member will review your proposal. We m
 
 ### Review & Merge
 
-After review, your pull request will either be approved (in which case congratulations on your contributions :tada::tada:! The cloudflare team thanks you :sparkles:), or we'll consult with you about additional changes we believe are needed.
+After review, your pull request will either be approved (in which case congratulations on your contributions :tada::tada:! The caddy-dns-cloudflare team thanks you :sparkles:), or we'll consult with you about additional changes we believe are needed.
