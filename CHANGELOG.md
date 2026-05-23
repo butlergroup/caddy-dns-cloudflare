@@ -1,13 +1,11 @@
-## Version 0.2.11 
+## caddy-dns-cloudflare Version 0.2.11 (05-22-2026)
 
 #### New Features
-
 
 #### Improvements
 - Updated Dockerfile dependencies to latest
 
 #### Fixes
-
 
 ---
 
