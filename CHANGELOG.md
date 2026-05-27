@@ -3,6 +3,7 @@
 #### New Features
 
 #### Improvements
+
 - Updated Dockerfile dependencies to latest
 
 #### Fixes
@@ -13,12 +14,11 @@
 
 #### New Features
 
-
 #### Improvements
+
 - bump Caddy from v2.11.2 to v2.11.3
 
 #### Fixes
-
 
 ---
 
@@ -26,12 +26,11 @@
 
 #### New Features
 
-
 #### Improvements
+
 - Updated go.mod dependencies to latest
 
 #### Fixes
-
 
 ---
 
@@ -39,13 +38,12 @@
 
 #### New Features
 
-
 #### Improvements
+
 - Updated go.mod dependencies to latest and to use latest Go version (1.26.3) 
 - Updated CI workflow to use latest Go version (1.26.3) 
 
 #### Fixes
-
 
 ---
 
@@ -53,12 +51,11 @@
 
 #### New Features
 
-
 #### Improvements
+
 - bump certmagic from 0.25.2 to 0.25.3
 
 #### Fixes
-
 
 ---
 
@@ -66,13 +63,12 @@
 
 #### New Features
 
-
 #### Improvements
+
 - Updated go.mod dependencies to latest and to use latest Go version (1.26.2)
 - Updated CI workflow to use latest Go version (1.26.2)
 
 #### Fixes
-
 
 ---
 
@@ -80,18 +76,18 @@
 
 #### New Features
 
-
 #### Improvements
+
 - Modified module name to point to github.com/butlergroup/caddy-dns-cloudflare
 
 #### Fixes
-
 
 ---
 
 ## Version 0.2.4 (03-26-2026)
 
 #### New Features
+
 - Added code-of-conduct.md
 - Added PULL_REQUEST_TEMPLATE.md
 - Added SECURITY.md
@@ -104,9 +100,11 @@
 - Added badges in README.md for all workflows
 
 #### Improvements
+
 - Updated go.mod dependencies to latest and to use latest Go version (1.26.1)
 - Updated CI workflow with permission and concurrency settings
 - Updated CI workflow to use latest Go version (1.26.1)
 
 #### Fixes
+
 - Modified Dockerfile to use alpine:latest and upgrade zlib to address CVE-2026-22184
