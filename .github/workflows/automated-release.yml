@@ -10,7 +10,7 @@ concurrency:
 on:
   workflow_dispatch:
   push:
-    branches: [main]
+    branches: [master]
     paths:
       - Dockerfile
       - go.mod
@@ -129,7 +129,7 @@ jobs:
 
           git commit -m "chore(release): dependency updated. Bump project version to ${{ steps.version.outputs.version }}" || true
 
-          git push origin HEAD:main
+          git push origin HEAD:master
 
       - name: Generate GitHub App token
         id: app-token
