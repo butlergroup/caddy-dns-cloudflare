@@ -1,3 +1,15 @@
+## caddy-dns-cloudflare Version v0.2.13 (06-02-2026)
+
+#### New Features
+
+#### Improvements
+
+- Updated go.mod and workflows to use latest Go version (1.26.4)
+
+#### Fixes
+
+-----
+
 ## caddy-dns-cloudflare Version v0.2.12 (05-27-2026)
 
 #### New Features
