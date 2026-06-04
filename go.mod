@@ -3,7 +3,7 @@ module github.com/butlergroup/caddy-dns-cloudflare
 go 1.26.4
 
 require (
-	github.com/caddyserver/caddy/v2 v2.11.3
+	github.com/caddyserver/caddy/v2 v2.11.4
 	github.com/libdns/cloudflare v0.2.2
 )
 
