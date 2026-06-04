@@ -1,0 +1,221 @@
+name: Update go.mod dependencies
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+on:
+  schedule:
+    - cron: "0 3 * * *"
+  workflow_dispatch:
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+      checks: read
+      actions: write
+    steps:
+      - name: Harden the runner (Audit all outbound calls)
+        uses: step-security/harden-runner@9af89fc71515a100421586dfdb3dc9c984fbf411 # v2.19.4
+        with:
+          egress-policy: audit
+
+      - uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6.0.3
+
+      - uses: actions/setup-go@4a3601121dd01d1626a1e23e37211e3254c1c06c # v6.4.0
+        with:
+          go-version-file: go.mod
+
+      - name: Snapshot go.mod before update
+        run: cp go.mod go.mod.before
+
+      - name: Update dependencies
+        run: bash ./update_go_mod.sh
+
+      - name: Extract dependency updates
+        id: dep-summary
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          if git diff --quiet -- go.mod go.sum; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+          {
+            echo "summary<<EOF"
+            awk '
+              NR==FNR {
+                if ($1 != "require" && $1 !~ /^\)/ && $1 !~ /^\(/ && NF >= 2) {
+                  before[$1]=$2
+                }
+                next
+              }
+              {
+                if ($1 != "require" && $1 !~ /^\)/ && $1 !~ /^\(/ && NF >= 2) {
+                  dep=$1
+                  after=$2
+                  if (dep in before && before[dep] != after) {
+                    print "- Updated " dep " from " before[dep] " to " after " through automated dependency management"
+                  } else if (!(dep in before)) {
+                    print "- Added " dep " at " after " through automated dependency management"
+                  }
+                }
+              }
+            ' go.mod.before go.mod | sort -u
+
+            echo "EOF"
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Verify GitHub App secret availability
+        shell: bash
+        env:
+          APP_ID: ${{ vars.APP_ID }}
+          APP_PRIVATE_KEY: ${{ secrets.APP_PRIVATE_KEY }}
+        run: |
+          set -euo pipefail
+
+          if [[ -z "$APP_ID" ]]; then
+            echo "::error::APP_ID is empty"
+            exit 1
+          fi
+
+          if [[ -z "$APP_PRIVATE_KEY" ]]; then
+            echo "::error::APP_PRIVATE_KEY is empty/unavailable in this workflow context"
+            exit 1
+          fi
+
+          if ! grep -q "BEGIN .*PRIVATE KEY" <<< "$APP_PRIVATE_KEY"; then
+            echo "::error::APP_PRIVATE_KEY does not look like a PEM private key"
+            exit 1
+          fi
+
+          echo "GitHub App inputs are present"
+
+      - name: Generate GitHub App installation token manually
+        id: app-token
+        shell: bash
+        env:
+          APP_ID: ${{ vars.APP_ID }}
+          APP_PRIVATE_KEY: ${{ secrets.APP_PRIVATE_KEY }}
+          REPO: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+
+          private_key_file="$(mktemp)"
+          trap 'rm -f "$private_key_file"' EXIT
+          printf '%s\n' "$APP_PRIVATE_KEY" > "$private_key_file"
+
+          now="$(date +%s)"
+          iat="$((now - 60))"
+          exp="$((now + 540))"
+
+          b64url() {
+            openssl base64 -A | tr '+/' '-_' | tr -d '='
+          }
+
+          header="$(printf '{"alg":"RS256","typ":"JWT"}' | b64url)"
+          payload="$(printf '{"iat":%s,"exp":%s,"iss":"%s"}' "$iat" "$exp" "$APP_ID" | b64url)"
+          unsigned_token="${header}.${payload}"
+
+          signature="$(
+            printf '%s' "$unsigned_token" |
+              openssl dgst -sha256 -sign "$private_key_file" -binary |
+              b64url
+          )"
+
+          jwt="${unsigned_token}.${signature}"
+
+          owner="${REPO%%/*}"
+          repo_name="${REPO#*/}"
+
+          echo "Looking up GitHub App installation for $REPO"
+
+          installation_json="$(
+            curl -sS \
+              -H "Accept: application/vnd.github+json" \
+              -H "Authorization: Bearer $jwt" \
+              -H "X-GitHub-Api-Version: 2022-11-28" \
+              "https://api.github.com/repos/$REPO/installation"
+          )"
+
+          installation_id="$(jq -r '.id // empty' <<< "$installation_json")"
+
+          if [[ -z "$installation_id" ]]; then
+            echo "Repo installation lookup did not return an installation ID."
+            echo "Trying owner-level installation lookup for $owner"
+
+            installation_json="$(
+              curl -sS \
+                -H "Accept: application/vnd.github+json" \
+                -H "Authorization: Bearer $jwt" \
+                -H "X-GitHub-Api-Version: 2022-11-28" \
+                "https://api.github.com/orgs/$owner/installation"
+            )"
+
+            installation_id="$(jq -r '.id // empty' <<< "$installation_json")"
+          fi
+
+          if [[ -z "$installation_id" ]]; then
+            echo "::error::Could not determine GitHub App installation ID for $REPO. Confirm the app is installed on owner '$owner' and has access to repo '$repo_name'."
+            echo "$installation_json" | jq -r '.message // empty'
+            exit 1
+          fi
+
+          token_json="$(
+            curl -sS \
+              -X POST \
+              -H "Accept: application/vnd.github+json" \
+              -H "Authorization: Bearer $jwt" \
+              -H "X-GitHub-Api-Version: 2022-11-28" \
+              "https://api.github.com/app/installations/$installation_id/access_tokens" \
+              -d "$(jq -nc \
+                --arg repo "$repo_name" \
+                '{
+                  repositories: [$repo],
+                  permissions: {
+                    contents: "write",
+                    pull_requests: "write",
+                    checks: "read",
+                    actions: "write"
+                  }
+                }')"
+          )"
+
+          token="$(jq -r '.token // empty' <<< "$token_json")"
+
+          if [[ -z "$token" ]]; then
+            echo "::error::GitHub App installation token was empty"
+            echo "$token_json" | jq -r '.message // empty'
+            exit 1
+          fi
+
+          echo "::add-mask::$token"
+          echo "token=$token" >> "$GITHUB_OUTPUT"
+
+      - uses: peter-evans/create-pull-request@5f6978faf089d4d20b00c7766989d076bb2fc7f1 # v8.1.1
+        if: steps.dep-summary.outputs.changed == 'true'
+        with:
+          token: ${{ steps.app-token.outputs.token }}
+          branch: go-mod-dependency-refresh
+          title: "chore: Update go.mod dependencies"
+          commit-message: |
+            chore: Update go.mod dependencies
+
+            ${{ steps.dep-summary.outputs.summary }}
+          body: |
+            Automated go.mod dependency refresh.
+
+            #### Dependency updates
+
+            ${{ steps.dep-summary.outputs.summary }}
+          delete-branch: true
