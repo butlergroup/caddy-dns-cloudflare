@@ -143,7 +143,7 @@ jobs:
           printf '%s\n' "$CHANGE_TEXT"
 
           cat > changelog_entry.md <<EOF
-          ## Caddy K8s Ingress Controller & Helm Chart Version ${VERSION} (${DATE})
+          ## caddy-dns-cloudflare Version ${VERSION} (${DATE})
 
           #### New Features
 
