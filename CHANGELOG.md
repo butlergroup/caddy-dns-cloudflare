@@ -4,6 +4,24 @@
 
 #### Improvements
 
+- Updated caddy from `5257595` to `97b0e25` through automated dependency management
+- Updated caddy from `97b0e25` to `0ff10d4` through automated dependency management
+- Updated github.com/caddyserver/caddy/v2 from 2.11.3 to 2.11.4 through automated dependency management
+- Updated github.com/prometheus/common from v0.67.5 to v0.68.1 through automated dependency management
+- Updated github/codeql-action from 4.36.1 to 4.36.2 through automated dependency management
+- chore: Update go.mod dependencies
+- updated-dependencies:
+
+#### Fixes
+
+---
+
+## Caddy K8s Ingress Controller & Helm Chart Version v0.2.14 (06-06-2026)
+
+#### New Features
+
+#### Improvements
+
 - Updated github.com/prometheus/common from v0.67.5 to v0.68.1 through automated dependency management
 - chore: Update go.mod dependencies
 
