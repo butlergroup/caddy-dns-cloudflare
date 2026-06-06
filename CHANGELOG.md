@@ -14,19 +14,6 @@
 
 #### Fixes
 
----
-
-## Caddy K8s Ingress Controller & Helm Chart Version v0.2.14 (06-06-2026)
-
-#### New Features
-
-#### Improvements
-
-- Updated github.com/prometheus/common from v0.67.5 to v0.68.1 through automated dependency management
-- chore: Update go.mod dependencies
-
-#### Fixes
-
 -----
 
 ## caddy-dns-cloudflare Version v0.2.13 (06-02-2026)
