@@ -1,3 +1,16 @@
+## caddy-dns-cloudflare Version v0.2.15 (06-07-2026)
+
+#### New Features
+
+#### Improvements
+
+- Updated github.com/quic-go/quic-go from v0.59.1 to v0.60.0 through automated dependency management
+- chore: Update go.mod dependencies
+
+#### Fixes
+
+---
+
 ## Caddy K8s Ingress Controller & Helm Chart Version v0.2.14 (06-06-2026)
 
 #### New Features
