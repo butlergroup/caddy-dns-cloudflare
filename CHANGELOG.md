@@ -1,3 +1,16 @@
+## caddy-dns-cloudflare Version v0.2.24 (06-25-2026)
+
+#### New Features
+
+#### Improvements
+
+- Updated caddy from `8e8c654` to `b6a94e7` through automated dependency management
+- updated-dependencies:
+
+#### Fixes
+
+---
+
 ## caddy-dns-cloudflare Version v0.2.23 (06-23-2026)
 
 #### New Features
