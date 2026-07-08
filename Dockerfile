@@ -1,4 +1,4 @@
-FROM caddy:2-builder-alpine@sha256:b6a94e74b72261bd536b35acdd22f3577d4e466a9550f2c8d6c8ed6413085d72 AS builder
+FROM caddy:2-builder-alpine@sha256:fd207488ae94421fe6a802e34006a50a6409e32fc0f68f5e779f26a45540d6a9 AS builder
 
 ADD . .
 
