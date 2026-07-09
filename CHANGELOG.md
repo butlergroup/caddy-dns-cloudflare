@@ -1,3 +1,23 @@
+## caddy-dns-cloudflare Version v0.2.32 (07-09-2026)
+
+#### New Features
+
+#### Improvements
+
+- Updated golang.org/x/crypto from v0.53.0 to v0.54.0 through automated dependency management
+- Updated golang.org/x/mod from v0.37.0 to v0.38.0 through automated dependency management
+- Updated golang.org/x/net from v0.56.0 to v0.57.0 through automated dependency management
+- Updated golang.org/x/sync from v0.21.0 to v0.22.0 through automated dependency management
+- Updated golang.org/x/sys from v0.46.0 to v0.47.0 through automated dependency management
+- Updated golang.org/x/term from v0.44.0 to v0.45.0 through automated dependency management
+- Updated golang.org/x/text from v0.39.0 to v0.40.0 through automated dependency management
+- Updated golang.org/x/tools from v0.47.0 to v0.48.0 through automated dependency management
+- chore: Update go.mod dependencies
+
+#### Fixes
+
+---
+
 ## caddy-dns-cloudflare Version v0.2.31 (07-09-2026)
 
 #### New Features
