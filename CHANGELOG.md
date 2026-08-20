@@ -1,3 +1,16 @@
+## caddy-dns-cloudflare Version v0.2.45 (08-20-2026)
+
+#### New Features
+
+#### Improvements
+
+- Updated github.com/miekg/dns from v1.1.72 to v1.1.73 through automated dependency management
+- chore: Update go.mod dependencies
+
+#### Fixes
+
+---
+
 ## caddy-dns-cloudflare Version v0.2.44 (08-20-2026)
 
 #### New Features
