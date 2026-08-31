@@ -1,3 +1,16 @@
+## caddy-dns-cloudflare Version v0.2.49 (08-31-2026)
+
+#### New Features
+
+#### Improvements
+
+- Updated github.com/prometheus/common from v0.70.1 to v0.71.0 through automated dependency management
+- chore: Update go.mod dependencies
+
+#### Fixes
+
+---
+
 ## caddy-dns-cloudflare Version v0.2.48 (08-30-2026)
 
 #### New Features
