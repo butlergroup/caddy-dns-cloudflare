@@ -9,7 +9,7 @@ RUN go install github.com/caddyserver/xcaddy/cmd/xcaddy@latest && \
     --output /usr/bin/caddy \
     --with "github.com/butlergroup/caddy-dns-cloudflare=."
 
-FROM alpine:latest@sha256:28bd5fe8b56d1bd048e5babf5b10710ebe0bae67db86916198a6eec434943f8b
+FROM alpine:latest@sha256:294b683cb724975bec92580e1e685676bd4b50bda910ddb8c51d4cabeaec77e6
 
 # added zlib to address CVE-2026-22184
 # added openssl to address CVE-2026-2673
