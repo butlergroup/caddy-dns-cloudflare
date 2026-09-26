@@ -1,3 +1,16 @@
+## caddy-dns-cloudflare Version v0.2.59 (09-26-2026)
+
+#### New Features
+
+#### Improvements
+
+- Updated github.com/mholt/acmez/v3 from v3.1.6 to v3.1.7 through automated dependency management
+- chore: Update go.mod dependencies
+
+#### Fixes
+
+---
+
 ## caddy-dns-cloudflare Version v0.2.58 (09-22-2026)
 
 #### New Features
