@@ -1,3 +1,18 @@
+## caddy-dns-cloudflare Version v0.2.62 (10-01-2026)
+
+#### New Features
+
+#### Improvements
+
+- Updated github.com/caddyserver/caddy/v2 from v2.11.5-0.20260718081438-93c0721156e5 to v2.11.6 through automated dependency management
+- Updated github.com/caddyserver/certmagic from v0.25.4 to v0.25.6 through automated dependency management
+- Updated github.com/caddyserver/zerossl from v0.1.5 to v0.1.6 through automated dependency management
+- chore: Update go.mod dependencies
+
+#### Fixes
+
+---
+
 ## caddy-dns-cloudflare Version v0.2.61 (09-29-2026)
 
 #### New Features
