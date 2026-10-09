@@ -1,3 +1,17 @@
+## caddy-dns-cloudflare Version v0.2.65 (10-09-2026)
+
+#### New Features
+
+#### Improvements
+
+- Updated github.com/prometheus/client_golang from v1.24.1 to v1.25.0 through automated dependency management
+- Updated golang.org/x/net from v0.59.0 to v0.60.0 through automated dependency management
+- chore: Update go.mod dependencies
+
+#### Fixes
+
+---
+
 ## caddy-dns-cloudflare Version v0.2.64 (10-08-2026)
 
 #### New Features
