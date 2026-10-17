@@ -1,3 +1,16 @@
+## caddy-dns-cloudflare Version v0.2.70 (10-17-2026)
+
+#### New Features
+
+#### Improvements
+
+- Updated github.com/klauspost/cpuid/v2 from v2.4.0 to v2.4.1 through automated dependency management
+- chore: Update go.mod dependencies
+
+#### Fixes
+
+---
+
 ## caddy-dns-cloudflare Version v0.2.69 (10-16-2026)
 
 #### New Features
