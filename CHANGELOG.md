@@ -1,3 +1,16 @@
+## caddy-dns-cloudflare Version v0.2.71 (10-20-2026)
+
+#### New Features
+
+#### Improvements
+
+- Updated github.com/quic-go/quic-go from v0.64.0 to v0.64.1 through automated dependency management
+- chore: Update go.mod dependencies
+
+#### Fixes
+
+---
+
 ## caddy-dns-cloudflare Version v0.2.70 (10-17-2026)
 
 #### New Features
