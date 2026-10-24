@@ -1,3 +1,16 @@
+## caddy-dns-cloudflare Version v0.2.73 (10-24-2026)
+
+#### New Features
+
+#### Improvements
+
+- Updated github.com/prometheus/procfs from v0.22.0 to v0.23.0 through automated dependency management
+- chore: Update go.mod dependencies
+
+#### Fixes
+
+---
+
 ## caddy-dns-cloudflare Version v0.2.72 (10-20-2026)
 
 #### New Features
