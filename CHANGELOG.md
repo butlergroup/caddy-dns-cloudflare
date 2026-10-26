@@ -1,3 +1,16 @@
+## caddy-dns-cloudflare Version v0.2.75 (10-26-2026)
+
+#### New Features
+
+#### Improvements
+
+- Updated alpine from `294b683` to `be26560` through automated dependency management
+- updated-dependencies:
+
+#### Fixes
+
+---
+
 ## caddy-dns-cloudflare Version v0.2.74 (10-26-2026)
 
 #### New Features
