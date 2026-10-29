@@ -1,3 +1,18 @@
+## caddy-dns-cloudflare Version v0.2.77 (10-29-2026)
+
+#### New Features
+
+#### Improvements
+
+- Added github.com/hashicorp/go-uuid at v1.0.4 through automated dependency management
+- Added github.com/pandatix/go-abnf at v0.5.1 through automated dependency management
+- Updated github.com/prometheus/common from v0.72.1 to v0.73.0 through automated dependency management
+- chore: Update go.mod dependencies
+
+#### Fixes
+
+---
+
 ## caddy-dns-cloudflare Version v0.2.76 (10-28-2026)
 
 #### New Features
