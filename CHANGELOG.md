@@ -1,3 +1,16 @@
+## caddy-dns-cloudflare Version v0.2.78 (10-30-2026)
+
+#### New Features
+
+#### Improvements
+
+- Updated github.com/pandatix/go-abnf from v0.5.1 to v0.5.3 through automated dependency management
+- chore: Update go.mod dependencies
+
+#### Fixes
+
+---
+
 ## caddy-dns-cloudflare Version v0.2.77 (10-29-2026)
 
 #### New Features
