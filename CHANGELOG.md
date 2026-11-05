@@ -1,3 +1,15 @@
+## caddy-dns-cloudflare Version v0.2.85 (11-04-2026)
+
+#### New Features
+
+#### Improvements
+
+#### Fixes
+
+- Pinned caddy to v2.11.4 to correct a CI test error
+
+---
+
 ## caddy-dns-cloudflare Version v0.2.84 (11-04-2026)
 
 #### New Features
