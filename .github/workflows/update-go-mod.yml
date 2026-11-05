@@ -32,11 +32,16 @@ jobs:
         with:
           go-version-file: go.mod
 
-      - name: Snapshot go.mod before update
-        run: cp go.mod go.mod.before
+      - name: Snapshot files before update
+        run: |
+          cp go.mod go.mod.before
+          cp Dockerfile Dockerfile.before
 
       - name: Update dependencies
         run: bash ./update_go_mod.sh
+
+      - name: Synchronize Dockerfile Caddy version
+        run: bash ./sync_caddy_version.sh
 
       - name: Extract dependency updates
         id: dep-summary
@@ -44,7 +49,7 @@ jobs:
         run: |
           set -euo pipefail
 
-          if git diff --quiet -- go.mod go.sum; then
+          if git diff --quiet -- go.mod go.sum Dockerfile; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
@@ -72,6 +77,18 @@ jobs:
                 }
               }
             ' go.mod.before go.mod | sort -u
+
+            previous_caddy_version="$(
+              sed -nE 's/^ARG CADDY_VERSION=([^[:space:]]+).*$/\1/p' Dockerfile.before
+            )"
+
+            updated_caddy_version="$(
+              sed -nE 's/^ARG CADDY_VERSION=([^[:space:]]+).*$/\1/p' Dockerfile
+            )"
+
+            if [[ "$previous_caddy_version" != "$updated_caddy_version" ]]; then
+              echo "- Updated Dockerfile CADDY_VERSION from ${previous_caddy_version} to ${updated_caddy_version} to match go.mod"
+            fi
 
             echo "EOF"
           } >> "$GITHUB_OUTPUT"
