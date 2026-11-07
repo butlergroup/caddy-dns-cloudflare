@@ -7,7 +7,7 @@ go get -u ./...
 
 echo "Restoring pinned dependencies..."
 
-go get "github.com/quic-go/quic-go@v0.64.1"
+# go get "github.com/quic-go/quic-go@v0.64.1"
 
 echo "Cleaning graph..."
 go mod tidy
