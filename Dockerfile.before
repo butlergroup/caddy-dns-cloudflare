@@ -2,7 +2,7 @@ FROM caddy:2-builder-alpine@sha256:95a5e7e2692b5eb9545aadc5b90a39f6f509bee59c950
 
 ADD . .
 
-ARG CADDY_VERSION=v2.11.8
+ARG CADDY_VERSION=v2.11.9
 
 RUN go install github.com/caddyserver/xcaddy/cmd/xcaddy@latest && \
     xcaddy build ${CADDY_VERSION} \
